@@ -1,0 +1,12 @@
+reelStrip1=0,9, 5,9, 1,9, 6,9, 7,9, 2,9, 5,9, 3,9, 6,9, 4,9, 7,9, 10,9
+reelStrip2=0,9, 5,9, 1,9, 6,9, 7,9, 2,9, 5,9, 3,9, 6,9, 4,9, 7,9, 10,9
+reelStrip3=0,9, 5,9, 1,9, 6,9, 7,9, 2,9, 5,9, 3,9, 6,9, 4,9, 7,9, 10,9
+reelStrip4=
+reelStrip5=
+reelStrip6=
+reelStripBonus1=
+reelStripBonus2=
+reelStripBonus3=
+reelStripBonus4=
+reelStripBonus5=
+reelStripBonus6=

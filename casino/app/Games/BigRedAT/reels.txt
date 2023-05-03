@@ -1,0 +1,12 @@
+reelStrip1=symbol_3,symbol_9,symbol_5,symbol_10,symbol_6,symbol_9,symbol_3,symbol_7,symbol_4,symbol_5,symbol_3,symbol_9,symbol_8,symbol_4,symbol_5,symbol_7,symbol_3,symbol_8,symbol_9,symbol_1,symbol_6,symbol_3,symbol_9,symbol_2,symbol_5,symbol_3,symbol_8,symbol_4,symbol_9,symbol_5,symbol_3,symbol_7,symbol_6
+reelStrip2=symbol_3,symbol_7,symbol_4,symbol_9,symbol_6,symbol_9,symbol_7,symbol_1,symbol_8,symbol_2,symbol_9,symbol_3,symbol_8,symbol_4,symbol_7,symbol_3,symbol_8,symbol_2,symbol_5,symbol_3,symbol_9,symbol_8,symbol_10,symbol_5,symbol_9,symbol_3,symbol_8,symbol_1,symbol_7,symbol_4,symbol_8,symbol_3,symbol_9,symbol_1,symbol_6,symbol_3,symbol_6,symbol_4,symbol_8,symbol_2,symbol_6,symbol_4,symbol_5,symbol_3,symbol_6,symbol_9,symbol_10,symbol_7,symbol_8
+reelStrip3=symbol_10,symbol_6,symbol_2,symbol_9,symbol_5,symbol_11,symbol_8,symbol_3,symbol_5,symbol_4,symbol_7,symbol_3,symbol_6,symbol_1,symbol_8,symbol_3,symbol_5,symbol_4,symbol_6,symbol_10,symbol_9,symbol_2,symbol_5,symbol_4,symbol_6,symbol_1,symbol_8,symbol_3,symbol_6,symbol_1,symbol_5,symbol_10,symbol_9,symbol_3,symbol_6,symbol_4,symbol_9,symbol_3,symbol_7,symbol_4,symbol_9,symbol_3,symbol_7,symbol_4
+reelStrip4=symbol_3,symbol_10,symbol_8,symbol_4,symbol_6,symbol_11,symbol_7,symbol_1,symbol_9,symbol_4,symbol_7,symbol_9,symbol_3,symbol_5,symbol_8,symbol_4,symbol_6,symbol_2,symbol_8,symbol_10,symbol_7,symbol_6,symbol_3,symbol_8,symbol_4,symbol_5,symbol_1,symbol_6,symbol_4,symbol_8,symbol_2,symbol_9,symbol_3,symbol_7,symbol_10,symbol_6,symbol_5,symbol_4,symbol_9,symbol_5
+reelStrip5=symbol_4,symbol_8,symbol_1,symbol_11,symbol_5,symbol_10,symbol_7,symbol_8,symbol_2,symbol_5,symbol_4,symbol_7,symbol_2,symbol_6,symbol_4,symbol_8,symbol_3,symbol_7,symbol_4,symbol_6,symbol_1,symbol_9,symbol_2,symbol_7,symbol_4,symbol_9,symbol_1,symbol_8,symbol_5,symbol_2,symbol_7,symbol_6
+reelStrip6=
+reelStripBonus1=
+reelStripBonus2=
+reelStripBonus3=
+reelStripBonus4=
+reelStripBonus5=
+reelStripBonus6=

@@ -1,0 +1,41 @@
+{
+    "name": "intergo/sms.to-laravel-lumen",
+    "description": "Laravel 5 package for sending sms in SMS.to",
+    "keywords": [
+        "laravel",
+        "sms",
+        "bulksms",
+        "marketing"
+    ],
+    "authors": [
+        {
+            "name": "Manny Isles",
+            "email": "manny@intergo.com.cy",
+            "homepage": "https://intergo.com.cy",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "guzzlehttp/guzzle": "~6.0",
+        "intergo/sms.to-php": "0.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Intergo\\SmsTo\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Intergo\\SmsTo\\ServiceProvider"
+            ],
+            "aliases": {
+                "SmsTo": "Intergo\\SmsTo\\Facades\\SmsToFacade"
+            }
+        }
+    }
+}

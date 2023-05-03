@@ -1,0 +1,15 @@
+{
+
+"port":"22088/arcade",
+
+"host":"betshop.us",
+"prefix":"https://",
+
+"host_ws":"betshop.us",
+"prefix_ws":"wss://",
+
+"ssl":true,
+
+"timezone":"Europe/Berlin"
+
+}

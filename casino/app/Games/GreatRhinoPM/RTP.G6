@@ -1,0 +1,22 @@
+Game Name = LongLongLong;
+
+Reel Strip 1 = P_1, BLANK-10|P_2, BLANK-10|P_3, BLANK-10;
+Reel Strip 2 = P_1, BLANK-10|P_2, BLANK-10|P_3, BLANK-10;
+Reel Strip 3 = P_1, BLANK-10|P_2, BLANK-10|P_3, BLANK-10;
+Reel Strip 4 = ;
+Reel Strip 5 = ;
+Reel Strip 6 = ;
+
+Reel Strip Bonus 1 = P_1, BLANK-10|P_2, BLANK-10|P_3, BLANK-10;
+Reel Strip Bonus 2 = P_1, BLANK-10|P_2, BLANK-10|P_3, BLANK-10;
+Reel Strip Bonus 3 = P_1, BLANK-10|P_2, BLANK-10|P_3, BLANK-10;
+Reel Strip Bonus 4 = ;
+Reel Strip Bonus 5 = ;
+Reel Strip Bonus 6 = ;
+
+Win Line = 1-10|2-10|3-10|4-10|5-10|6-10|7-10|8-10|9-10|10-10|20-10|30-10|40-10|50-10;
+Win Bonus = 10-5|50-5|100-5|200-5|300-5|400-5|500-5;
+
+Step Symbol = 1;
+Step Fixed = ;
+Symbol Fixed = P_1, BLANK|P_2, BLANK|P_3, BLANK;

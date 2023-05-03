@@ -1,0 +1,16 @@
+{
+    "name": "CoinPayment",
+    "alias": "coinpayment",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Hexters\\CoinPayment\\Providers\\CoinPaymentServiceProvider"
+    ],
+    "aliases": {
+        "CoinPayment": "Hexters\\CoinPayment\\Helpers\\CoinPaymentFacade"
+    },
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,84 @@
+{
+    "name": "loshmis/vanguard",
+    "description": "Advanced PHP Login and User Management",
+    "keywords": ["advanced", "secure", "login", "user management", "authentication", "authorization", "register"],
+    "type": "project",
+    "repositories": [],
+    "require": {
+        "php": "^7.2",
+        "anlutro/l4-settings": "^1.0",
+        "bacon/bacon-qr-code": "^2.0",
+        "barryvdh/laravel-debugbar": "^3.3",
+        "coinbase/coinbase-commerce": "^1.0.1",
+        "fideloper/proxy": "^4.0",
+        "geoip2/geoip2": "^2.11",
+        "guzzlehttp/guzzle": "^6.5.5",
+        "hexters/coinpayment": "^2.0",
+        "intergo/sms.to-laravel-lumen": "^0.0.28",
+        "intervention/image": "^2.3",
+        "jenssegers/agent": "^2.5",
+        "jeremykenedy/laravel-roles": "3.*",
+        "laracasts/presenter": "^0.2.1",
+        "laravel/framework": "8.x",
+        "laravel/legacy-factories": "^1.0",
+        "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.0",
+        "league/fractal": "^0.16.0",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "paragonie/random_compat": "~1.4",
+        "pragmarx/google2fa-laravel": "^1.4",
+        "predis/predis": "^1.1",
+        "proengsoft/laravel-jsvalidation": "^4.0",
+        "spatie/db-dumper": "^2.21",
+        "tymon/jwt-auth": "1.*",
+        "yajra/laravel-datatables-oracle": "~9.0"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "VanguardLTE\\": "app/"
+        },
+        "files": [
+            "app/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

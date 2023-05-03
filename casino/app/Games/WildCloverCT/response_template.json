@@ -1,0 +1,84 @@
+{
+
+"create_session":[{"enabled_denoms":[{"label":"0.01","value":0.01,"id":"0.01","cents":1},{"value":0.05,"cents":5,"id":"0.05","label":"0.05"}],"gameplay_mintime":0,"client_request_timeout":31,"preferred_languages":["en"],"credit_display_mode":"cash_only","session_id":"3b6960672d91a683f2e64816177da501","regulation":"None","multigame_application":null,"ping_interval":10,"account_status":{"currency":"EUR","decimal_separator":".","win_limit_over":false,"thousands_separator":",","support_cashout":false,"demo_mode":true,"rgs_balance":30000,"support_buyin":false,"currency_code":"EUR","credit":30000,"seamless_credit":1,"currency_sign":""},"_req_game_name":null,"_req_sequence_number":11,"status":{"status":"ok"},"game_loader_application":"MainInetLoaderGames","start_sequence_number":10,"use_currency_locale":false,"_req_command":"create_session","_req_session_id":null,"server_curr_timestamp":{"timestamp_epoch":1568744447.92735,"timestamp_http":"2019/09/17 18:20:47","timestamp":"2019-09-17 18:20:47.927354+03"},"current_timestamp":"2019-09-17 18:20:47.927354+03","server_denom":{"label":"0.01","value":0.01,"id":"0.01","cents":1},"last_game_recall_enabled":0}],
+
+
+"init_game":[{"account_status":{"currency":"EUR","decimal_separator":".","thousands_separator":",","support_cashout":false,"support_buyin":false,"rgs_balance":0,"freeround_limit":0,"currency_code":"EUR","digits_after_decimal_separator":2,"seamless_credit":1,"credit":"30000","currency_sign":""},"resume":false,"_req_session_id":"3b6960672d91a683f2e64816177da501","server_curr_timestamp":{"timestamp_http":"2019/09/17 18:20:48","timestamp_epoch":1568744448.20917,"timestamp":"2019-09-17 18:20:48.209171+03"},"_req_command":"init_game","freeround_bet_per_line_cents":null,"server_version":{"game_checksum":"SHA-256:0add6f76dc76053e79ca1864d32196caf94979c403ab7e97db455d9f071cdb5a; SHA-1:abac26077f4eb1e3d48d6f75d47ecdc39dd522aa; ","rgs_core_checksum":"SHA-256:c13945d17b3e67a0d88a1180aacb111af201fff5aed08de8f09ce75d025f9b2e; SHA-1:63c2daa370ac51314173f56502b34227f2462146; ","icasino_checksum":"SHA-256:5f70b3868f17f15d92befd2b1c8a783f4f06a13784e8271c674338b5dbfc15a3; SHA-1:4510abec79390732c388654effeedb0f95e2b416; ","game_protocol_version":1.2,"rgs_protocol_version":"1.1"},"freeround_lines":null,"_req_game_name":"WildClover","game_config":{"directory_name":"WildClover","license":"","subgames_labels":{"main":{"subgame_id":"116","symbols":["1","2","3","4","5","6","7","8","9","10"]}},"paytable_old":{"4":{"4":"35","5":"100","3":"8"},"7":{"3":"10","4":"60","5":"200"},"5":{"4":"35","5":"100","3":"8"},"6":{"3":"10","4":"60","5":"200"},"8":{"3":"30","4":"100","5":"300"},"2":{"3":"8","4":"35","5":"100"},"9":{"5":"1000","4":"100","3":"40","2":"4"},"3":{"4":"35","5":"100","3":"8"}},"columns":5,"line_min_bet":1,"reels_sets":{"116":{"symbols":["1","2","3","4","5","6","7","8","9","10"],"reels":[[9,9,9,9,2,2,2,2,1,8,8,8,8,3,3,3,3,4,4,4,4,2,2,2,2,3,3,3,3,3,7,7,7,7,1,4,4,4,4,7,7,7,7,4,4,4,4,6,6,6,6,5,5,5,5,6,6,6,6,5,5,5,5,1],[2,2,2,2,9,9,9,9,2,2,2,2,1,8,8,8,8,10,10,10,10,3,3,3,3,7,7,7,7,3,3,3,3,1,4,4,4,4,1,7,7,7,7,10,10,10,10,6,6,6,6,5,5,5,5,6,6,6,6,5,5,5,5,1],[2,2,2,2,9,9,9,9,2,2,2,2,8,8,8,8,10,10,10,10,3,3,3,3,1,7,7,7,7,5,5,5,5,3,3,3,3,1,7,7,7,7,1,4,4,4,4,6,6,6,6,4,4,4,4,6,6,6,6,5,5,5,5,5],[9,9,9,9,2,2,3,2,2,2,2,4,8,8,8,8,8,8,10,10,10,10,10,10,10,3,3,3,3,3,7,7,7,7,7,7,7,7,1,4,4,4,4,4,4,4,4,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5],[9,9,9,9,2,4,2,2,2,2,2,2,2,2,8,8,8,8,8,8,3,3,3,3,3,3,3,4,3,7,7,7,7,7,7,7,7,1,4,4,4,4,4,4,4,4,4,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5]]}},"rows":3,"game_win_check_type":"lines","lines_mode":"20","paytable_scatters_old":{"1":{"5":{"bonus_type":"none","bonus_value":0,"factor":"500"},"4":{"bonus_type":"none","bonus_value":0,"factor":"20"},"3":{"bonus_type":"none","bonus_value":0,"factor":"3"}}},"line_max_bet":25,"main_subgame_reels_set":"116","reel_anim_real":0,"game_denoms":{"0.05":"0.05","0.01":"0.01"},"game_type":null,"lines_max_number":20,"lines_step_numbers_quick":[1,5,10,15,20],"win_limit":0,"paytable_wilds_old":{"10":{"exclude":{"10":{"count":1},"1":{"count":1}},"multi":0,"expanding":0,"factor":"1"}},"lines":[["1","1","1","1",1],["0","0","0","0",0],["2","2","2","2",2],["0","1","2","1",0],["2","1","0","1",2],["0","0","1","2",2],["2","2","1","0","0"],["1","0","1","2",1],["1","2","1","0","1"],["0","1","0","1",0],["2","1","2","1","2"],["0","1","1","1","1"],["2","1","1","1","1"],["1","1","0","0",0],["1","1","2","2",2],["1","0","0","0",0],["1","2","2","2","2"],["0","0","0","0",1],["2","2","2","2",1],["2","2","1","2",2]],"init_screen_subgame_label":"main","demo":null,"lines_per_credit":1,"extra_bet_enabled":false,"app_name":"Wild Clover","main_subgame_label":"main","allow_client_demo_request":0,"skill_stop_enabled":1,"autoplay":1,"paytables":{"116":{"paytable":{"6":{"3":{"ordering":6,"factor":"10"},"5":{"factor":"200","ordering":22},"4":{"ordering":14,"factor":"60"}},"8":{"4":{"factor":"100","ordering":16},"5":{"ordering":24,"factor":"300"},"3":{"factor":"30","ordering":8}},"2":{"4":{"factor":"35","ordering":9},"5":{"ordering":17,"factor":"100"},"3":{"factor":"8","ordering":2}},"5":{"5":{"factor":"100","ordering":20},"4":{"ordering":12,"factor":"35"},"3":{"ordering":5,"factor":"8"}},"7":{"4":{"ordering":15,"factor":"60"},"5":{"factor":"200","ordering":23},"3":{"ordering":7,"factor":"10"}},"4":{"5":{"factor":"100","ordering":19},"4":{"factor":"35","ordering":11},"3":{"ordering":4,"factor":"8"}},"3":{"5":{"factor":"100","ordering":18},"4":{"factor":"35","ordering":10},"3":{"ordering":3,"factor":"8"}},"9":{"2":{"factor":"4","ordering":1},"3":{"ordering":13,"factor":"40"},"4":{"ordering":21,"factor":"100"},"5":{"ordering":25,"factor":"1000"}}},"paytable_wilds":{"10":{"factor":"1","expanding":0,"multi":0,"exclude":{"10":{"count":1},"1":{"count":1}}}},"paytable_scatters":{"1":{"3":{"ordering":26,"bonus_type":"none","bonus_value":0,"free_games_extra_bet_only":0,"factor":"3"},"5":{"free_games_extra_bet_only":0,"factor":"500","bonus_value":0,"bonus_type":"none","ordering":28},"4":{"bonus_value":0,"bonus_type":"none","ordering":27,"free_games_extra_bet_only":0,"factor":"20"}}}}},"line_step_bet_numbers":[1,2,3,5,10],"result_math_real":"","celebration":0,"reel_rotate_mintime":0,"line_step_bet_numbers_quick":[1,2,3,5,10],"lines_step_numbers":[1,5,10,15,20],"autoplay_steps":[0,5,10,25,50,100,500,1000],"last_game_recall_enabled":0,"line_step_bet_numbers_quick_increment":"steps_only","double":{"double_type":"rb","double_enable":1,"double_enter_limit":10,"double_limit":50},"init_screen":[["7","3","4","1","4"],["7","1","6","4","3"],["1","4","6","4","7"]],"lines_min_number":1},"_req_sequence_number":12,"status":{"status":"ok"},"finish_game_command":"fast","show_win":"last_win","freeround_limit":0}],
+
+
+"poll":[
+  {
+    "account_status": {
+      "currency_code": "EUR",
+      "credit": "30000",
+      "currency_sign": "",
+      "rgs_balance": 0,
+      "decimal_separator": ".",
+      "digits_after_decimal_separator": 2,
+      "currency": "EUR",
+      "seamless_credit": 1,
+      "freeround_limit": 0,
+      "thousands_separator": ",",
+      "support_cashout": false,
+      "updated_credit": "30000",
+      "support_buyin": false
+    },
+    "_req_game_name": "WildClover",
+    "status": {
+      "status": "ok"
+    },
+    "server_curr_timestamp": {
+      "timestamp_http": "2019/09/14 17:30:07",
+      "timestamp_epoch": 1568482207.37722,
+      "timestamp": "2019-09-14 17:30:07.377223+03"
+    },
+    "_req_session_id": "096a64ddf10b43e791ff16a071155ede",
+    "_req_command": "poll",
+    "result": [
+      {
+        "msg": [],
+        "command": "screen_events"
+      },
+      {
+        "account_status": {
+          "decimal_separator": ".",
+          "rgs_balance": 0,
+          "currency_sign": "",
+          "credit": "30000",
+          "currency_code": "EUR",
+          "freeround_limit": 0,
+          "seamless_credit": 1,
+          "thousands_separator": ",",
+          "currency": "EUR",
+          "support_cashout": false,
+          "support_buyin": false
+        },
+        "command": "account_status"
+      }
+    ],
+    "_req_sequence_number": 92
+  }
+],
+
+"play":[{"status":{"status":"ok"},"_req_game_name":"WildClover","_req_command":"play","jackpot_status":{"jackpot_enabled":false},"gameplay_id":"1302003804","_req_sequence_number":17,"_req_session_id":"71c40baefc71b3d65764be8a3a25fa67","result":[{"free_game_number":0,"subgame_factor":"1","is_free":false,"is_last":true,"reels_start_timing":[1,1,1,1,1],"real_reels_in_use":false,"subgame_label_game_number":1,"wait_for_button":false,"reels_anim_time":1,"subgame_bonus":[],"scatters_win":[],"end_subgame_timestamp":null,"stop_reels_pos":[[9,35,27,61,35],[10,36,28,62,36],[11,37,29,63,37]],"skip_reels_anim":false,"request_params":{"line_bet":"1","demo":null,"extra_bet":0,"total_bet":20,"total_win_limit":null,"lines":"20","game_denom":"0.01"},"type":"slot_subgame","stop_reels":[["8","8","8"],["4","4","4"],["7","7","5"],["5","5","5"],["7","7","1"]],"total_win":0,"reels_sets_name":"116","free_games":0,"expanded_wilds":[],"total_bet":20,"start_subgame_timestamp":"2019-09-21 23:28:03.159623+03","free_game_total":0,"result_reels":[["8","4","7","5","7"],["8","4","7","5","7"],["8","4","5","5","1"]],"reels_stop_timing":[1,1,1,1,1],"add_wilds":0,"msgs":[],"stop_indexes":[[9,10,11],[35,36,37],[27,28,29],[61,62,63],[35,36,37]],"lines_win":[],"step_number":0,"subgame_label":"main","reels_dir":["down","down","down","down","down"],"increase_factor_bonus":null,"win":"0","type_descr":"SPIN","bonus":null,"subgame_label_game_total":1}],"server_curr_timestamp":{"timestamp_epoch":1569108483.15962,"timestamp_http":"2019/09/21 23:28:03","timestamp":"2019-09-21 23:28:03.159623+03"},"account_status":{"digits_after_decimal_separator":2,"support_buyin":false,"credit":"29960","rgs_balance":29960,"support_cashout":false,"currency_code":"FUN","seamless_credit":1,"currency_sign":"","thousands_separator":",","freeround_limit":0,"decimal_separator":".","currency":"FUN"}}],
+
+
+
+
+"subgame_finished":[{"account_status":{"currency_code":"FUN","support_cashout":false,"thousands_separator":",","currency_sign":"","seamless_credit":1,"support_buyin":false,"digits_after_decimal_separator":2,"rgs_balance":0,"credit":"29960","currency":"FUN","freeround_limit":0,"decimal_separator":"."},"server_curr_timestamp":{"timestamp_http":"2019/09/21 23:28:03","timestamp_epoch":1569108483.64497,"timestamp":"2019-09-21 23:28:03.64497+03"},"_req_command":"subgame_finished","_req_game_name":"WildClover","_req_session_id":"71c40baefc71b3d65764be8a3a25fa67","status":{"status":"ok"},"_req_sequence_number":18},{"account_status":{"rgs_balance":0,"credit":"29960","support_buyin":false,"digits_after_decimal_separator":2,"thousands_separator":",","currency_sign":"","seamless_credit":1,"currency_code":"FUN","support_cashout":false,"decimal_separator":".","freeround_limit":0,"currency":"FUN"},"server_curr_timestamp":{"timestamp_http":"2019/09/21 23:28:03","timestamp_epoch":1569108483.98644,"timestamp":"2019-09-21 23:28:03.986442+03"},"status":{"status":"ok"},"_req_session_id":"71c40baefc71b3d65764be8a3a25fa67","_req_sequence_number":19,"_req_command":"game_finished","_req_game_name":"WildClover"}],
+
+
+"game_finished":[{"_req_game_name":"WildClover","account_status":{"support_buyin":false,"support_cashout":false,"decimal_separator":".","currency_sign":"","rgs_balance":29570,"credit":"29570","currency_code":"EUR","seamless_credit":1,"freeround_limit":0,"thousands_separator":",","currency":"EUR","digits_after_decimal_separator":2},"status":{"status":"ok"},"_req_session_id":"e6937681f75815ffb1a1d9aebbd0c35f","server_curr_timestamp":{"timestamp_http":"2019/09/15 11:57:56","timestamp_epoch":1568548676.50873,"timestamp":"2019-09-15 11:57:56.508727+03"},"_req_command":"game_finished","_req_sequence_number":417}],
+
+
+"continue":[{"status":{"status":"ok"},"account_status":{"support_buyin":false,"support_cashout":false,"digits_after_decimal_separator":2,"currency":"EUR","thousands_separator":",","freeround_limit":0,"seamless_credit":1,"credit":"29570","currency_code":"EUR","currency_sign":"","rgs_balance":0,"decimal_separator":"."},"_req_game_name":"WildClover","_req_sequence_number":546,"_req_command":"continue","result":[],"_req_session_id":"e6937681f75815ffb1a1d9aebbd0c35f","server_curr_timestamp":{"timestamp":"2019-09-15 12:20:20.495188+03","timestamp_epoch":1568550020.49519,"timestamp_http":"2019/09/15 12:20:20"}}],
+
+"gamble":[{"_req_command":"continue","result":[{"win":0,"type_descr":"RED/BLACK","step_number":4,"start_subgame_timestamp":"2019-09-15 15:03:18.710356+03","double_cards_history":[44,0,37,8,28,33],"end_subgame_timestamp":null,"double_result":"lost","limit_over":false,"type":"result_red_black_double","request_params":{"double_betpart":"all","double_key":"red"},"double_win":0,"double_bet":"20"}],"_req_sequence_number":43,"_req_session_id":"af247570123cf589dda5c7c7e9f84ddf","server_curr_timestamp":{"timestamp_http":"2019/09/15 15:03:18","timestamp":"2019-09-15 15:03:18.710356+03","timestamp_epoch":1568559798.71036},"_req_game_name":"WildClover","account_status":{"support_buyin":false,"support_cashout":false,"credit":"29970","currency_code":"EUR","rgs_balance":0,"currency_sign":"","decimal_separator":".","digits_after_decimal_separator":2,"currency":"EUR","thousands_separator":",","seamless_credit":1,"freeround_limit":0},"gameplay_id":1291090826,"status":{"status":"ok"}}],
+
+"free_result":{"scatters_win":[{"positions":[[2,0],[0,2],[0,4]],"increase_factor_bonus":[],"bonus_type":"free_games","wilds":null,"wild_exists":null,"bonus_value":"12","msgs":null,"factor":"5","symbols_positions":{"1":{"positions":[[2,0],[0,2],[0,4]]}},"symbol":"1","subgame_win_factor":1,"count":"3","win":"150","paytable_factor":5}],"reels_stop_timing":[1,1,1,1,1],"total_bet":30,"subgame_factor":"1","type":"slot_subgame","is_free":false,"real_reels_in_use":false,"is_last":false,"subgame_label_game_total":1,"expanded_wilds":[],"total_win":150,"end_subgame_timestamp":null,"win":"150","stop_reels_pos":[[126,107,64,102,64],[127,108,65,103,65],[64,109,66,104,66]],"subgame_label_game_number":1,"stop_reels":[["2","4","1"],["6","7","10"],["1","3","3"],["7","9","2"],["1","2","4"]],"subgame_label":"main","lines_win":[],"reels_anim_time":1,"bonus":null,"step_number":0,"stop_indexes":[[126,127,64],[107,108,109],[64,65,66],[102,103,104],[64,65,66]],"type_descr":"SPIN","request_params":{"demo":null,"total_win_limit":null,"total_bet":30,"extra_bet":0,"game_denom":"0.01","line_bet":"1","lines":"30"},"result_reels":[["2","6","1","7","1"],["4","7","3","9","2"],["1","10","3","2","4"]],"free_games":12,"msgs":[],"skip_reels_anim":false,"start_subgame_timestamp":"2019-09-15 15:41:44.31342+03","free_game_number":0,"reels_dir":["down","down","down","down","down"],"subgame_bonus":[],"wait_for_button":false,"free_game_total":0,"reels_sets_name":"135","reels_start_timing":[1,1,1,1,1],"increase_factor_bonus":null,"add_wilds":0},
+
+"free_spin_result":{"bonus":null,"reels_anim_time":1,"subgame_label":"free","lines_win":[],"stop_reels":[["9","9","9"],["6","2","3"],["6","8","2"],["3","4","2"],["9","9","9"]],"stop_reels_pos":[[458,497,486,502,452],[459,498,487,503,453],[460,499,488,504,454]],"subgame_label_game_number":1,"win":"0","end_subgame_timestamp":null,"expanded_wilds":[],"total_win":150,"subgame_label_game_total":12,"is_last":false,"real_reels_in_use":false,"is_free":true,"type":"slot_subgame","reels_stop_timing":[1,1,1,1,1],"subgame_factor":"1","total_bet":30,"scatters_win":[],"add_wilds":0,"reels_start_timing":[1,1,1,1,1],"increase_factor_bonus":null,"reels_sets_name":"136","wait_for_button":false,"free_game_total":12,"reels_dir":["down","down","down","down","down"],"subgame_bonus":[],"start_subgame_timestamp":null,"free_game_number":1,"free_games":0,"msgs":[],"skip_reels_anim":false,"request_params":{"line_bet":"1","game_denom":"0.01","lines":"30","demo":null,"total_win_limit":null,"total_bet":30,"extra_bet":0},"result_reels":[["9","6","6","3","9"],["9","2","8","4","9"],["9","3","2","2","9"]],"type_descr":"FREE GAME","stop_indexes":[[458,459,460],[497,498,499],[486,487,488],[502,503,504],[452,453,454]],"step_number":1}
+
+
+
+}

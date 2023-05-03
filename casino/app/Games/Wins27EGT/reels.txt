@@ -1,0 +1,12 @@
+reelStrip1=6,1,1,1,4,0,0,0,9,5,8,2,2,2,3,3,3,5,2,2,2,5,10,2,2,2,7,1,1,1
+reelStrip2=0,0,0,8,2,2,2,3,3,3,10,7,5,1,1,1,0,0,0,2,2,2,4,8,6,9,2,2,2,5
+reelStrip3=9,0,0,2,2,2,1,1,1,6,4,0,0,0,6,10,3,3,3,5,1,1,1,5,7,2,2,2,5,8
+reelStrip4=
+reelStrip5=
+reelStrip6=
+reelStripBonus1=
+reelStripBonus2=
+reelStripBonus3=
+reelStripBonus4=
+reelStripBonus5=
+reelStripBonus6=

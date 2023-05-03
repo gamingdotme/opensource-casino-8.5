@@ -1,0 +1,414 @@
+<?php 
+namespace VanguardLTE\Games\JacksOrBetterMHPTM
+{
+    set_time_limit(5);
+    class Server
+    {
+        public function get($request, $game)
+        {
+            function get_($request, $game)
+            {
+                \DB::transaction(function() use ($request, $game)
+                {
+                    try
+                    {
+                        $checked = new \VanguardLTE\Lib\LicenseDK();
+                        $license_notifications_array = $checked->aplVerifyLicenseDK(null, 0);
+                        if( $license_notifications_array['notification_case'] != 'notification_license_ok' ) 
+                        {
+                            $response = '{"responseEvent":"error","responseType":"error","serverResponse":"Error LicenseDK"}';
+                            exit( $response );
+                        }
+                        $userId = \Auth::id();
+                        if( $userId == null ) 
+                        {
+                            $response = '{"responseEvent":"error","responseType":"","serverResponse":"invalid login"}';
+                            exit( $response );
+                        }
+                        $slotSettings = new SlotSettings($game, $userId);
+                        if( !$slotSettings->is_active() ) 
+                        {
+                            $response = '{"responseEvent":"error","responseType":"","serverResponse":"Game is disabled"}';
+                            exit( $response );
+                        }
+                        $postData = json_decode(trim(file_get_contents('php://input')), true);
+                        $balanceInCents = sprintf('%01.2f', $slotSettings->GetBalance()) * 100;
+                        $result_tmp = [];
+                        if( isset($postData['umid']) ) 
+                        {
+                            $umid = $postData['umid'];
+                            if( isset($postData['ID']) ) 
+                            {
+                                $umid = $postData['ID'];
+                            }
+                        }
+                        else
+                        {
+                            if( isset($postData['ID']) ) 
+                            {
+                                $result_tmp[] = '3:::{"ID":18}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":1},"ID":40085}';
+                            }
+                            $umid = 0;
+                        }
+                        if( $umid == '40186' ) 
+                        {
+                            $cardsArr = [];
+                            for( $i = 0; $i <= 3; $i++ ) 
+                            {
+                                for( $j = 0; $j <= 12; $j++ ) 
+                                {
+                                    $cardsArr[] = (object)[
+                                        'suit' => '' . $i, 
+                                        'value' => '' . $j
+                                    ];
+                                }
+                            }
+                            if( $slotSettings->GetGameData('JacksOrBetterMHPTMDAmount') < 1 ) 
+                            {
+                                $slotSettings->SetGameData('JacksOrBetterMHPTMTotalWin', $slotSettings->GetGameData('JacksOrBetterMHPTMTotalWin') / 2);
+                            }
+                            $cWin = $slotSettings->GetGameData('JacksOrBetterMHPTMTotalWin');
+                            $aWin = $cWin * 2;
+                            $slotSettings->SetBalance(-1 * $cWin);
+                            $slotSettings->SetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''), $cWin);
+                            shuffle($cardsArr);
+                            $resultCards = [
+                                $cardsArr[0], 
+                                $cardsArr[1], 
+                                $cardsArr[2], 
+                                $cardsArr[3], 
+                                $cardsArr[4]
+                            ];
+                            $isWin = rand(1, 2);
+                            if( $isWin == 1 ) 
+                            {
+                                $pCard = rand($slotSettings->GetGameData('JacksOrBetterMHPTMDCard'), 12);
+                            }
+                            else
+                            {
+                                $pCard = rand(0, $slotSettings->GetGameData('JacksOrBetterMHPTMDCard'));
+                            }
+                            $resultCards = [
+                                $slotSettings->GetGameData('JacksOrBetterMHPTMDCardView'), 
+                                $cardsArr[1], 
+                                $cardsArr[2], 
+                                $cardsArr[3], 
+                                $cardsArr[4]
+                            ];
+                            $resultCards[(int)$postData['index'] - 1] = [
+                                'value' => $pCard . '', 
+                                'suit' => rand(0, 3) . ''
+                            ];
+                            if( $slotSettings->GetGameData('JacksOrBetterMHPTMDCard') == $pCard ) 
+                            {
+                                $totalWin = $cWin;
+                            }
+                            else if( $slotSettings->GetGameData('JacksOrBetterMHPTMDCard') < $pCard ) 
+                            {
+                                $totalWin = $aWin;
+                            }
+                            else
+                            {
+                                $totalWin = 0;
+                            }
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMTotalWin', $totalWin);
+                            if( $totalWin > 0 ) 
+                            {
+                                $slotSettings->SetBalance($totalWin);
+                                $slotSettings->SetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''), -1 * $totalWin);
+                            }
+                            $balanceInCents = sprintf('%01.2f', $slotSettings->GetBalance()) * 100;
+                            $result_tmp[] = '3:::{"amount":' . $slotSettings->GetGameData('JacksOrBetterMHPTMDAmount') . ',"cWin":' . $cWin . ',"pcard":' . $slotSettings->GetGameData('JacksOrBetterMHPTMDCard') . ',"totalWin":' . $totalWin . ',"data":{"cards":' . json_encode($resultCards) . ',"windowId":"VRqbhm"},"ID":40187,"umid":46}';
+                            $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":1},"ID":40085}';
+                            if( $totalWin <= 0 ) 
+                            {
+                                $totalWin = -1 * $cWin;
+                            }
+                            $response = '{"totalWin":' . $totalWin . ',"data":{"cards":' . json_encode($resultCards) . ',"windowId":"VRqbhm"},"ID":40187,"umid":46}';
+                            $slotSettings->SaveLogReport($response, $slotSettings->GetGameData('JacksOrBetterMHPTMBet'), 1, $totalWin, 'double');
+                        }
+                        if( $umid == '40182' ) 
+                        {
+                            $cardsArr = [];
+                            for( $i = 0; $i <= 3; $i++ ) 
+                            {
+                                for( $j = 0; $j <= 12; $j++ ) 
+                                {
+                                    $cardsArr[] = (object)[
+                                        'suit' => '' . $i, 
+                                        'value' => '' . $j
+                                    ];
+                                }
+                            }
+                            shuffle($cardsArr);
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMDCard', (int)$cardsArr[0]->value);
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMDCardView', $cardsArr[0]);
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMDAmount', (double)$postData['amount']);
+                            $balanceInCents = sprintf('%01.2f', $slotSettings->GetBalance()) * 100;
+                            $result_tmp[] = '3:::{"data":{"am":' . $slotSettings->GetGameData('JacksOrBetterMHPTMDAmount') . ',"card":{"suit":"' . $cardsArr[0]->suit . '","value":"' . $cardsArr[0]->value . '"},"windowId":"VRqbhm"},"ID":40183,"umid":46}';
+                            $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":1},"ID":40085}';
+                        }
+                        if( $umid == '40179' ) 
+                        {
+                            $resultCards = $slotSettings->GetGameData('JacksOrBetterMHPTMCurrentCards');
+                            $cardsArr = $slotSettings->GetGameData('JacksOrBetterMHPTMCards');
+                            $BankReserved = $slotSettings->GetGameData('JacksOrBetterMHPTMBankReserved');
+                            $slotSettings->SetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''), $BankReserved);
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMBankReserved', 0);
+                            $cardsArr = array_splice($cardsArr, 5);
+                            $ccLimit = $slotSettings->GetGameData($slotSettings->slotId . 'Hands');
+                            $bank = $slotSettings->GetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''));
+                            for( $i = 0; $i <= 2000; $i++ ) 
+                            {
+                                $resultCardsAll = [];
+                                $totalWin = 0;
+                                $tw = [];
+                                for( $cc = 0; $cc < $ccLimit; $cc++ ) 
+                                {
+                                    shuffle($cardsArr);
+                                    $crdCount = 0;
+                                    $resultCards = $slotSettings->GetGameData('JacksOrBetterMHPTMCurrentCards');
+                                    for( $j = 0; $j < 5; $j++ ) 
+                                    {
+                                        if( $postData['cardHolds'][$j] == 0 ) 
+                                        {
+                                            $resultCards[$j] = $cardsArr[$crdCount];
+                                            $crdCount++;
+                                        }
+                                    }
+                                    $payrate = $slotSettings->GetCombination([
+                                        $resultCards[0]->value, 
+                                        $resultCards[1]->value, 
+                                        $resultCards[2]->value, 
+                                        $resultCards[3]->value, 
+                                        $resultCards[4]->value
+                                    ], [
+                                        $resultCards[0]->suit, 
+                                        $resultCards[1]->suit, 
+                                        $resultCards[2]->suit, 
+                                        $resultCards[3]->suit, 
+                                        $resultCards[4]->suit
+                                    ]);
+                                    $resultCardsAll[] = '{"cards":' . json_encode($resultCards) . '}';
+                                    $totalWin += (($payrate * $slotSettings->GetGameData('JacksOrBetterMHPTMBet')) / $ccLimit);
+                                    $tw[] = ($payrate * $slotSettings->GetGameData('JacksOrBetterMHPTMBet')) / $ccLimit;
+                                }
+                                if( $totalWin <= $bank ) 
+                                {
+                                    break;
+                                }
+                            }
+                            if( $totalWin > 0 ) 
+                            {
+                                $slotSettings->SetBalance($totalWin);
+                                $slotSettings->SetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''), -1 * $totalWin);
+                            }
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMTotalWin', $totalWin);
+                            $balanceInCents = sprintf('%01.2f', $slotSettings->GetBalance()) * 100;
+                            $result_tmp[] = '3:::{"tw":[' . implode(',', $tw) . '],"totalWin":' . $totalWin . ',"data":{"cards":[' . implode(',', $resultCardsAll) . '],"windowId":"OxupG1"},"ID":40180,"umid":53}';
+                            $response = '{"responseEvent":"spin","responseType":"bet","serverResponse":{"Hands":' . $slotSettings->GetGameData($slotSettings->slotId . 'Hands') . ',"cardsArr":' . json_encode($cardsArr) . ',"state":"idle","slotLines":1,"slotBet":' . $slotSettings->GetGameData('JacksOrBetterMHPTMBet') . ',"totalFreeGames":0,"currentFreeGames":0,"Balance":' . $balanceInCents . ',"afterBalance":' . $balanceInCents . ',"bonusWin":0,"totalWin":' . $totalWin . ',"winLines":[],"cards":' . json_encode($resultCards) . '}}';
+                            $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":1},"ID":40085}';
+                            $slotSettings->SaveLogReport($response, 0, 1, $totalWin, 'bet');
+                        }
+                        if( $umid == '40175' ) 
+                        {
+                            $postData['bet'] = $postData['bet'] / 100;
+                            $allbet = $postData['bet'];
+                            if( $slotSettings->GetBalance() < $allbet ) 
+                            {
+                                $response = '{"responseEvent":"error","responseType":"' . $umid . '","serverResponse":"invalid balance"}';
+                                echo $response;
+                            }
+                            if( $allbet < 0.0001 ) 
+                            {
+                                $response = '{"responseEvent":"error","responseType":"' . $umid . '","serverResponse":"invalid bet"}';
+                                echo $response;
+                            }
+                            if( !isset($postData['slotEvent']) ) 
+                            {
+                                $postData['slotEvent'] = 'bet';
+                            }
+                            $bankSum = $postData['bet'] / 100 * $slotSettings->GetPercent();
+                            $slotSettings->SetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''), $bankSum, $postData['slotEvent']);
+                            $slotSettings->UpdateJackpots($postData['bet']);
+                            $slotSettings->SetBalance(-1 * $postData['bet'], $postData['slotEvent']);
+                            $result_tmp = [];
+                            $cardsArr = [];
+                            for( $i = 0; $i <= 3; $i++ ) 
+                            {
+                                for( $j = 0; $j <= 12; $j++ ) 
+                                {
+                                    $cardsArr[] = (object)[
+                                        'suit' => '' . $i, 
+                                        'value' => '' . $j
+                                    ];
+                                }
+                            }
+                            $bank = $slotSettings->GetBank((isset($postData['slotEvent']) ? $postData['slotEvent'] : ''));
+                            for( $i = 0; $i <= 2000; $i++ ) 
+                            {
+                                shuffle($cardsArr);
+                                $resultCards = [
+                                    $cardsArr[0], 
+                                    $cardsArr[1], 
+                                    $cardsArr[2], 
+                                    $cardsArr[3], 
+                                    $cardsArr[4]
+                                ];
+                                $payrate = $slotSettings->GetCombination([
+                                    $resultCards[0]->value, 
+                                    $resultCards[1]->value, 
+                                    $resultCards[2]->value, 
+                                    $resultCards[3]->value, 
+                                    $resultCards[4]->value
+                                ], [
+                                    $resultCards[0]->suit, 
+                                    $resultCards[1]->suit, 
+                                    $resultCards[2]->suit, 
+                                    $resultCards[3]->suit, 
+                                    $resultCards[4]->suit
+                                ]);
+                                $totalWin = $payrate * $allbet;
+                                if( $totalWin <= $bank ) 
+                                {
+                                    $slotSettings->SetGameData('JacksOrBetterMHPTMBankReserved', $totalWin);
+                                    break;
+                                }
+                            }
+                            $resultCards = [
+                                $cardsArr[0], 
+                                $cardsArr[1], 
+                                $cardsArr[2], 
+                                $cardsArr[3], 
+                                $cardsArr[4]
+                            ];
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMBet', $allbet);
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMCurrentCards', $resultCards);
+                            $slotSettings->SetGameData('JacksOrBetterMHPTMCards', $cardsArr);
+                            $balanceInCents = sprintf('%01.2f', $slotSettings->GetBalance()) * 100;
+                            $result_tmp[] = '3:::{"data":{"credit":' . $balanceInCents . ',"cards":' . json_encode($resultCards) . ',"windowId":"OxupG1"},"ID":40176,"umid":53}';
+                            $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":1},"ID":40085}';
+                            $response = '{"responseEvent":"spin","responseType":"bet","serverResponse":{"Hands":' . $slotSettings->GetGameData($slotSettings->slotId . 'Hands') . ',"cardsArr":' . json_encode($cardsArr) . ',"state":"draw","slotLines":1,"slotBet":' . $allbet . ',"totalFreeGames":0,"currentFreeGames":0,"Balance":' . $balanceInCents . ',"afterBalance":' . $balanceInCents . ',"bonusWin":0,"totalWin":' . $totalWin . ',"winLines":[],"cards":' . json_encode($resultCards) . '}}';
+                            $slotSettings->SaveLogReport($response, $allbet, 1, 0, 'bet');
+                        }
+                        switch( $umid ) 
+                        {
+                            case '40384':
+                                if( $postData['handsCount'] > 0 && $postData['handsCount'] <= 50 ) 
+                                {
+                                    $gameBets = $slotSettings->Bet;
+                                    for( $i = 0; $i < count($gameBets); $i++ ) 
+                                    {
+                                        $gameBets[$i] = $gameBets[$i] * 100;
+                                    }
+                                    $slotSettings->SetGameData($slotSettings->slotId . 'Hands', $postData['handsCount']);
+                                    $result_tmp[] = '3:::{"data":{"handCount":' . $postData['handsCount'] . ',"optionEnabledHands":[1,50,4,100,25,10],"showLimitsInClient":true,"disableHalfDoubleMode":true,"gameLimits":{"gameGroup":"jb_mh1","minBet":0,"maxBet":0,"minPosBet":0,"maxPosBet":50000,"coinSizes":[' . implode(',', $gameBets) . ']},"doubleBetMultiplier":0,"windowId":"28ysnC"},"ID":40385,"umid":31}';
+                                }
+                                break;
+                            case '31031':
+                                $result_tmp[] = '3:::{"data":{"urlList":[{"urlType":"mobile_login","url":"https://login.loc/register","priority":1},{"urlType":"mobile_support","url":"https://ww2.loc/support","priority":1},{"urlType":"playerprofile","url":"","priority":1},{"urlType":"playerprofile","url":"","priority":10},{"urlType":"gambling_commission","url":"","priority":1},{"urlType":"cashier","url":"","priority":1},{"urlType":"cashier","url":"","priority":1}]},"ID":100}';
+                                break;
+                            case '10001':
+                                $result_tmp[] = '3:::{"data":{"typeBalance":2,"balanceInCents":0},"ID":40083,"umid":3}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":0},"ID":40083,"umid":4}';
+                                $result_tmp[] = '3:::{"data":{"commandId":13218,"params":["0","null"]},"ID":50001,"umid":5}';
+                                $result_tmp[] = '3:::{"token":{"secretKey":"","currency":"USD","balance":0,"loginTime":""},"ID":10002,"umid":7}';
+                                break;
+                            case '40294':
+                                $result_tmp[] = '3:::{"nicknameInfo":{"nickname":""},"ID":10022,"umid":8}';
+                                $result_tmp[] = '3:::{"data":{"commandId":10713,"params":["0","ba","bj","ct","gc","grel","hb","jb_mh","ro","sc","tr"]},"ID":50001,"umid":9}';
+                                $result_tmp[] = '3:::{"data":{"commandId":11666,"params":["0","0","0"]},"ID":50001,"umid":11}';
+                                $result_tmp[] = '3:::{"data":{"commandId":13981,"params":["0","1"]},"ID":50001,"umid":12}';
+                                $result_tmp[] = '3:::{"data":{"commandId":14080,"params":["0","0"]},"ID":50001,"umid":14}';
+                                $result_tmp[] = '3:::{"data":{"keyValueCount":5,"elementsPerKey":1,"params":["10","1","11","500","12","1","13","0","14","0"]},"ID":40716,"umid":15}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":0},"ID":40083,"umid":16}';
+                                $result_tmp[] = '3:::{"balanceInfo":{"clientType":"casino","totalBalance":' . $balanceInCents . ',"currency":"' . $slotSettings->slotCurrency . '","balanceChange":' . $balanceInCents . '},"ID":10006,"umid":17}';
+                                $result_tmp[] = '3:::{"data":{},"ID":40292,"umid":18}';
+                                break;
+                            case '10010':
+                                $result_tmp[] = '3:::{"data":{"urls":{"casino-cashier-myaccount":[],"regulation_pt_self_exclusion":[],"link_legal_aams":[],"regulation_pt_player_protection":[],"mobile_cashier":[],"mobile_bank":[],"mobile_bonus_terms":[],"mobile_help":[],"link_responsible":[],"cashier":[{"url":"","priority":1},{"url":"","priority":1}],"gambling_commission":[{"url":"","priority":1},{"url":"","priority":1}],"desktop_help":[],"chat_token":[],"mobile_login_error":[],"mobile_error":[],"mobile_login":[{"url":"","priority":1}],"playerprofile":[{"url":"","priority":1},{"url":"","priority":10}],"link_legal_half":[],"ngmdesktop_quick_deposit":[],"external_login_form":[],"mobile_main_promotions":[],"mobile_lobby":[],"mobile_promotion":[],{"url":"","priority":1},{"url":"","priority":10}],"mobile_withdraw":[],"mobile_funds_trans":[],"mobile_quick_deposit":[],"mobile_history":[],"mobile_deposit_limit":[],"minigames_help":[],"link_legal_18":[],"mobile_responsible":[],"mobile_share":[],"mobile_lobby_error":[],"mobile_mobile_comp_points":[],"mobile_support":[{"url":"","priority":1}],"mobile_chat":[],"mobile_logout":[],"mobile_deposit":[],"invite_friend":[]}},"ID":10011,"umid":19}';
+                                $result_tmp[] = '3:::{"data":{"brokenGames":[],"windowId":"SuJLru"},"ID":40037,"umid":20}';
+                                break;
+                            case '40024':
+                                $gameBets = $slotSettings->Bet;
+                                for( $i = 0; $i < count($gameBets); $i++ ) 
+                                {
+                                    $gameBets[$i] = $gameBets[$i] * 100;
+                                }
+                                $result_tmp[] = '3:::{"data":{"funNoticeGames":0,"funNoticePayouts":0,"gameGroup":"jb_mh","minBet":0,"maxBet":0,"minPosBet":0,"maxPosBet":50000,"coinSizes":[' . implode(',', $gameBets) . ']},"ID":40025,"umid":19}';
+                                break;
+                            case '40036':
+                                $slotSettings->SetGameData($slotSettings->slotId . 'BonusWin', 0);
+                                $slotSettings->SetGameData($slotSettings->slotId . 'FreeGames', 0);
+                                $slotSettings->SetGameData($slotSettings->slotId . 'CurrentFreeGame', 0);
+                                $slotSettings->SetGameData($slotSettings->slotId . 'TotalWin', 0);
+                                $slotSettings->SetGameData($slotSettings->slotId . 'FreeBalance', 0);
+                                $slotSettings->SetGameData('JacksOrBetterMHPTMBets', []);
+                                $lastEvent = $slotSettings->GetHistory();
+                                $slotSettings->SetGameData($slotSettings->slotId . 'brokenGames', '');
+                                $result_tmp[] = '3:::{"data":{"brokenGames":["' . $slotSettings->GetGameData($slotSettings->slotId . 'brokenGames') . '"],"windowId":"SuJLru"},"ID":40037,"umid":22}';
+                                break;
+                            case '40020':
+                                $result_tmp[] = '3:::{"data":{"typeBalance":2,"balanceInCents":0},"ID":40085}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":1,"balanceInCents":0},"ID":40085}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":0},"ID":40085}';
+                                $result_tmp[] = '3:::{"data":{"credit":' . $balanceInCents . ',"windowId":"SuJLru"},"ID":40026,"umid":28}';
+                                break;
+                            case '40050':
+                                $lastEvent = $slotSettings->GetHistory();
+                                if( $lastEvent != 'NULL' && $lastEvent->serverResponse->state == 'draw' ) 
+                                {
+                                    $slotSettings->SetGameData($slotSettings->slotId . 'Cards', $lastEvent->serverResponse->cardsArr);
+                                    $slotSettings->SetGameData($slotSettings->slotId . 'CurrentCards', $lastEvent->serverResponse->cards);
+                                    $slotSettings->SetGameData($slotSettings->slotId . 'Bet', $lastEvent->serverResponse->slotBet);
+                                    $slotSettings->SetGameData($slotSettings->slotId . 'Hands', $lastEvent->serverResponse->Hands);
+                                    $result_tmp[] = '3:::{"data":{},"ID":40031,"umid":18}';
+                                    $result_tmp[] = '3:::{"data":{"windowId":"ErbtIw"},"ID":48047,"umid":19}';
+                                    $result_tmp[] = '3:::{"data":{},"ID":40031,"umid":18}';
+                                    $result_tmp[] = '3:::{"data":{"bet":' . ($lastEvent->serverResponse->slotBet * 100) . ',"numCoins":1,"isDouble":false,"cards":' . json_encode($lastEvent->serverResponse->cards) . ',"handCount":' . $lastEvent->serverResponse->Hands . ',"windowId":"K0QpQs"},"ID":40387,"umid":28}';
+                                }
+                                $result_tmp[] = '3:::{"data":{"typeBalance":2,"balanceInCents":0},"ID":40085}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":1,"balanceInCents":0},"ID":40085}';
+                                $result_tmp[] = '3:::{"data":{"typeBalance":0,"currency":"' . $slotSettings->slotCurrency . '","balanceInCents":' . $balanceInCents . ',"deltaBalanceInCents":0},"ID":40085}';
+                                $result_tmp[] = '3:::{"data":{"credit":' . $balanceInCents . ',"windowId":"SuJLru"},"ID":40026,"umid":28}';
+                                $result_tmp[] = '3:::{"data":{"limitType":[1,2,3,4],"limitMin":[100,100,100,100],"limitMax":[1000,10000,8000,50000],"windowId":"MVRRkz"},"ID":40008,"umid":29}';
+                                break;
+                            case '48300':
+                                $result_tmp[] = '3:::{"balanceInfo":{"clientType":"casino","totalBalance":' . $balanceInCents . ',"currency":"' . $slotSettings->slotCurrency . '","balanceChange":0},"ID":10006,"umid":30}';
+                                $result_tmp[] = '3:::{"data":{"waitingLogins":[],"waitingAlerts":[],"waitingDialogs":[],"waitingDialogMessages":[],"waitingToasterMessages":[]},"ID":48301,"umid":31}';
+                                break;
+                        }
+                        $response = implode('------', $result_tmp);
+                        $slotSettings->SaveGameData();
+                        echo $response;
+                    }
+                    catch( \Exception $e ) 
+                    {
+                        if( isset($slotSettings) ) 
+                        {
+                            $slotSettings->InternalErrorSilent($e);
+                        }
+                        else
+                        {
+                            $strLog = '';
+                            $strLog .= "\n";
+                            $strLog .= ('{"responseEvent":"error","responseType":"' . $e . '","serverResponse":"InternalError","request":' . json_encode($_REQUEST) . ',"requestRaw":' . file_get_contents('php://input') . '}');
+                            $strLog .= "\n";
+                            $strLog .= ' ############################################### ';
+                            $strLog .= "\n";
+                            $slg = '';
+                            if( file_exists(storage_path('logs/') . 'GameInternal.log') ) 
+                            {
+                                $slg = file_get_contents(storage_path('logs/') . 'GameInternal.log');
+                            }
+                            file_put_contents(storage_path('logs/') . 'GameInternal.log', $slg . $strLog);
+                        }
+                    }
+                }, 5);
+            }
+            get_($request, $game);
+        }
+    }
+
+}

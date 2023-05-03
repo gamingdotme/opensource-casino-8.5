@@ -1,0 +1,84 @@
+{
+
+"create_session":[{"preferred_languages":["en"],"server_curr_timestamp":{"timestamp_epoch":1568712189.78814,"timestamp":"2019-09-17 09:23:09.788136+03","timestamp_http":"2019/09/17 09:23:09"},"status":{"status":"ok"},"client_request_timeout":31,"gameplay_mintime":0,"enabled_denoms":[{"value":0.01,"id":"0.01","cents":1,"label":"0.01"},{"id":"0.05","value":0.05,"cents":5,"label":"0.05"}],"account_status":{"credit":30000,"thousands_separator":",","support_cashout":false,"currency_code":"EUR","demo_mode":true,"currency":"EUR","decimal_separator":".","seamless_credit":1,"currency_sign":"","win_limit_over":false,"support_buyin":false,"rgs_balance":30000},"_req_session_id":null,"multigame_application":null,"regulation":"None","server_denom":{"cents":1,"label":"0.01","id":"0.01","value":0.01},"current_timestamp":"2019-09-17 09:23:09.788136+03","credit_display_mode":"cash_only","session_id":"eb56d3c9e78d0f70215025dc32659703","start_sequence_number":10,"use_currency_locale":false,"last_game_recall_enabled":0,"game_loader_application":"MainInetLoaderGames","ping_interval":10,"_req_game_name":null,"_req_sequence_number":11,"_req_command":"create_session"}],
+
+
+"init_game":[{"resume":false,"show_win":"last_win","finish_game_command":"fast","freeround_bet_per_line_cents":null,"server_curr_timestamp":{"timestamp":"2019-09-17 09:23:10.012489+03","timestamp_http":"2019/09/17 09:23:10","timestamp_epoch":1568712190.01249},"account_status":{"currency_sign":"","seamless_credit":1,"decimal_separator":".","currency":"EUR","rgs_balance":0,"support_buyin":false,"support_cashout":false,"currency_code":"EUR","thousands_separator":",","digits_after_decimal_separator":2,"credit":"30000","freeround_limit":0},"_req_sequence_number":12,"_req_game_name":"40_Tresaures","freeround_lines":null,"_req_session_id":"eb56d3c9e78d0f70215025dc32659703","_req_command":"init_game","freeround_limit":0,"status":{"status":"ok"},"game_config":{"line_min_bet":1,"paytable_old":{"7":{"4":"80","3":"20","5":"200"},"2":{"5":"100","4":"40","3":"8"},"4":{"3":"8","4":"40","5":"100"},"3":{"5":"100","4":"40","3":"8"},"9":{"5":"1000","2":"4","3":"60","4":"200"},"8":{"5":"300","3":"40","4":"100"},"5":{"4":"40","3":"8","5":"100"},"6":{"3":"20","4":"80","5":"200"}},"paytable_wilds_old":{"10":{"exclude":{"10":{"count":1},"1":{"count":1}},"expanding":0,"multi":0,"factor":"1"}},"license":"","lines_per_credit":1,"rows":4,"reels_sets":{"58":{"symbols":["1","2","3","4","5","6","7","8","9","10"],"reels":[[9,9,9,9,2,2,2,2,1,8,8,8,8,8,8,3,3,3,3,2,2,2,2,2,3,3,3,3,3,7,7,7,7,1,4,4,4,4,4,7,7,7,7,4,4,4,4,6,6,6,6,5,5,5,5,6,6,6,6,5,5,5,5,1],[2,2,2,2,9,9,9,9,2,2,2,2,1,8,8,8,8,8,8,10,10,10,10,3,3,3,3,3,3,3,7,7,7,7,1,4,4,4,4,7,7,7,7,4,4,4,4,6,6,6,6,5,5,5,5,6,6,6,6,5,5,5,5,1],[2,2,2,2,9,9,9,9,2,2,2,2,8,8,8,8,8,8,8,10,10,10,10,3,3,3,3,3,3,1,7,7,7,7,5,5,5,5,7,7,7,7,1,4,4,4,4,6,6,6,6,4,4,4,4,6,6,6,6,5,5,5,5,5],[9,9,9,9,2,3,3,2,3,2,2,2,8,8,8,8,8,8,10,10,10,10,10,10,10,3,3,3,3,3,7,7,7,7,7,7,7,7,1,4,4,4,4,4,4,4,4,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5],[9,9,9,9,2,3,2,2,2,2,2,3,3,2,8,8,8,8,8,8,3,3,3,3,3,3,3,3,3,7,7,7,7,7,7,7,7,1,4,4,4,4,4,4,4,4,4,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5]]}},"lines_step_numbers_quick":[1,10,20,30,40],"main_subgame_reels_set":"58","double":{"double_enable":1,"double_enter_limit":10,"double_limit":50,"double_type":"rb"},"lines_mode":"40","game_win_check_type":"lines","demo":null,"main_subgame_label":"main","directory_name":"40_Tresaures","paytable_scatters_old":{"1":{"5":{"bonus_value":0,"factor":"500","bonus_type":"none"},"4":{"bonus_value":0,"factor":"20","bonus_type":"none"},"3":{"bonus_type":"none","factor":"2","bonus_value":0}}},"init_screen":[["1","3","10","7","5"],["9","3","10","7","5"],["9","3","10","7","5"],["9","3","3","7","5"]],"columns":5,"lines_max_number":40,"reel_anim_real":0,"line_step_bet_numbers":[1,2,3,5,10],"line_step_bet_numbers_quick_increment":"steps_only","lines":[["1","1","1","1","1"],["2","2","2","2","2"],["0","0","0","0","0"],["3","3","3","3","3"],["1","1","0","1","2"],["1","2","3","2","1"],["0","0","1","2","3"],["3","3","2","1","0"],["1","0","0","0","1"],["2","3","3","3","2"],["0","1","2","3","3"],["3","2","1","0","0"],["1","0","1","2","1"],["2","3","2","1","2"],["0","1","0","1","0"],["3","2","3","2","3"],["1","2","1","0","1"],["2","1","2","3","2"],["0","1","1","1","0"],["3","2","2","2","3"],["1","1","2","3","3"],["2","2","1","0","0"],["1","1","0","1","1"],["2","2","3","2","2"],["1","2","2","2","3"],["2","1","1","1","0"],["0","0","1","0","0"],["3","3","2","3","3"],["0","1","2","2","3"],["3","2","1","1","0"],["0","0","0","1","2"],["3","3","3","2","1"],["1","0","0","1","2"],["2","3","3","2","1"],["0","1","1","2","3"],["3","2","2","1","0"],["1","0","1","2","3"],["2","3","2","1","0"],["0","1","2","3","2"],["3","2","1","0","1"]],"result_math_real":"","extra_bet_enabled":false,"reel_rotate_mintime":0,"autoplay_steps":[0,5,10,25,50,100,500,1000],"game_denoms":{"0.05":"0.05","0.01":"0.01"},"line_max_bet":10,"init_screen_subgame_label":"main","game_type":null,"lines_min_number":1,"celebration":0,"last_game_recall_enabled":0,"lines_step_numbers":[5,10,20,30,40],"subgames_labels":{"main":{"subgame_id":"58","symbols":["1","2","3","4","5","6","7","8","9","10"]}},"autoplay":1,"win_limit":0,"paytables":{"58":{"paytable":{"6":{"3":{"factor":"20","ordering":6},"4":{"ordering":14,"factor":"80"},"5":{"factor":"200","ordering":22}},"5":{"3":{"ordering":5,"factor":"8"},"4":{"factor":"40","ordering":12},"5":{"factor":"100","ordering":20}},"8":{"3":{"factor":"40","ordering":8},"4":{"ordering":16,"factor":"100"},"5":{"factor":"300","ordering":24}},"4":{"5":{"factor":"100","ordering":19},"3":{"ordering":4,"factor":"8"},"4":{"ordering":11,"factor":"40"}},"3":{"3":{"factor":"8","ordering":3},"4":{"ordering":10,"factor":"40"},"5":{"factor":"100","ordering":18}},"9":{"5":{"factor":"1000","ordering":25},"2":{"ordering":1,"factor":"4"},"3":{"factor":"60","ordering":13},"4":{"ordering":21,"factor":"200"}},"2":{"5":{"factor":"100","ordering":17},"4":{"factor":"40","ordering":9},"3":{"factor":"8","ordering":2}},"7":{"3":{"ordering":7,"factor":"20"},"4":{"ordering":15,"factor":"80"},"5":{"factor":"200","ordering":23}}},"paytable_scatters":{"1":{"4":{"factor":"20","bonus_type":"none","free_games_extra_bet_only":0,"bonus_value":0,"ordering":27},"3":{"free_games_extra_bet_only":0,"ordering":26,"bonus_value":0,"bonus_type":"none","factor":"2"},"5":{"factor":"500","bonus_type":"none","free_games_extra_bet_only":0,"bonus_value":0,"ordering":28}}},"paytable_wilds":{"10":{"exclude":{"10":{"count":1},"1":{"count":1}},"factor":"1","multi":0,"expanding":0}}}},"skill_stop_enabled":1,"allow_client_demo_request":0,"app_name":"40 Treasures","line_step_bet_numbers_quick":[1,2,3,5,10]},"server_version":{"game_checksum":"SHA-256:22d031a86dc4e4b565cfc5afc00cdb5f4d10871e4b82a98fdd3128366bb61cbd; SHA-1:a6e2871e5bb2fb8b143a087f70b8a1d095b67db8; ","rgs_protocol_version":"1.1","rgs_core_checksum":"SHA-256:c13945d17b3e67a0d88a1180aacb111af201fff5aed08de8f09ce75d025f9b2e; SHA-1:63c2daa370ac51314173f56502b34227f2462146; ","icasino_checksum":"SHA-256:5f70b3868f17f15d92befd2b1c8a783f4f06a13784e8271c674338b5dbfc15a3; SHA-1:4510abec79390732c388654effeedb0f95e2b416; ","game_protocol_version":1.2}}],
+
+
+"poll":[
+  {
+    "account_status": {
+      "currency_code": "EUR",
+      "credit": "30000",
+      "currency_sign": "",
+      "rgs_balance": 0,
+      "decimal_separator": ".",
+      "digits_after_decimal_separator": 2,
+      "currency": "EUR",
+      "seamless_credit": 1,
+      "freeround_limit": 0,
+      "thousands_separator": ",",
+      "support_cashout": false,
+      "updated_credit": "30000",
+      "support_buyin": false
+    },
+    "_req_game_name": "AmericanGIgolo",
+    "status": {
+      "status": "ok"
+    },
+    "server_curr_timestamp": {
+      "timestamp_http": "2019/09/14 17:30:07",
+      "timestamp_epoch": 1568482207.37722,
+      "timestamp": "2019-09-14 17:30:07.377223+03"
+    },
+    "_req_session_id": "096a64ddf10b43e791ff16a071155ede",
+    "_req_command": "poll",
+    "result": [
+      {
+        "msg": [],
+        "command": "screen_events"
+      },
+      {
+        "account_status": {
+          "decimal_separator": ".",
+          "rgs_balance": 0,
+          "currency_sign": "",
+          "credit": "30000",
+          "currency_code": "EUR",
+          "freeround_limit": 0,
+          "seamless_credit": 1,
+          "thousands_separator": ",",
+          "currency": "EUR",
+          "support_cashout": false,
+          "support_buyin": false
+        },
+        "command": "account_status"
+      }
+    ],
+    "_req_sequence_number": 92
+  }
+],
+
+"play":[{"gameplay_id":"1299419784","_req_command":"play","jackpot_status":{"jackpot_enabled":false},"_req_game_name":"40_Tresaures","status":{"status":"ok"},"account_status":{"credit":"29960","rgs_balance":29960,"digits_after_decimal_separator":2,"support_buyin":false,"seamless_credit":1,"currency_sign":"","thousands_separator":",","support_cashout":false,"currency_code":"EUR","decimal_separator":".","freeround_limit":0,"currency":"EUR"},"server_curr_timestamp":{"timestamp":"2019-09-20 13:54:01.957376+03","timestamp_epoch":1568987641.95738,"timestamp_http":"2019/09/20 13:54:01"},"result":[{"stop_indexes":[[3,4,5,6],[29,30,31,32],[55,56,57,58],[49,50,51,52],[57,58,59,60]],"lines_win":[],"increase_factor_bonus":null,"reels_dir":["down","down","down","down","down"],"step_number":0,"subgame_label":"main","win":"0","subgame_label_game_total":1,"bonus":null,"type_descr":"SPIN","free_game_total":0,"start_subgame_timestamp":"2019-09-20 13:54:01.957376+03","total_bet":40,"expanded_wilds":[],"result_reels":[["9","3","6","6","5"],["2","7","6","6","5"],["2","7","6","6","5"],["2","7","6","6","5"]],"reels_stop_timing":[1,1,1,1,1],"msgs":[],"add_wilds":0,"scatters_win":[],"subgame_bonus":[],"stop_reels_pos":[[3,29,55,49,57],[4,30,56,50,58],[5,31,57,51,59],[6,32,58,52,60]],"end_subgame_timestamp":null,"request_params":{"demo":null,"line_bet":"1","total_bet":40,"extra_bet":0,"total_win_limit":null,"game_denom":"0.01","lines":"40"},"skip_reels_anim":false,"free_games":0,"reels_sets_name":"58","total_win":0,"stop_reels":[["9","2","2","2"],["3","7","7","7"],["6","6","6","6"],["6","6","6","6"],["5","5","5","5"]],"type":"slot_subgame","subgame_factor":"1","free_game_number":0,"real_reels_in_use":false,"reels_start_timing":[1,1,1,1,1],"is_free":false,"is_last":true,"wait_for_button":false,"subgame_label_game_number":1,"reels_anim_time":1}],"_req_session_id":"11656781c341d2db01acac3c10198f4c","_req_sequence_number":13}],
+
+
+
+
+"subgame_finished":[{"status":{"status":"ok"},"_req_session_id":"11656781c341d2db01acac3c10198f4c","_req_sequence_number":14,"_req_command":"subgame_finished","_req_game_name":"40_Tresaures","account_status":{"decimal_separator":".","freeround_limit":0,"currency":"EUR","support_buyin":false,"digits_after_decimal_separator":2,"rgs_balance":0,"credit":"29960","support_cashout":false,"currency_code":"EUR","thousands_separator":",","currency_sign":"","seamless_credit":1},"server_curr_timestamp":{"timestamp_http":"2019/09/20 13:54:02","timestamp_epoch":1568987642.55702,"timestamp":"2019-09-20 13:54:02.557024+03"}},{"_req_sequence_number":15,"_req_session_id":"11656781c341d2db01acac3c10198f4c","status":{"status":"ok"},"_req_game_name":"40_Tresaures","_req_command":"game_finished","server_curr_timestamp":{"timestamp":"2019-09-20 13:54:02.931739+03","timestamp_http":"2019/09/20 13:54:02","timestamp_epoch":1568987642.93174},"account_status":{"decimal_separator":".","freeround_limit":0,"currency":"EUR","digits_after_decimal_separator":2,"support_buyin":false,"credit":"29960","rgs_balance":0,"support_cashout":false,"currency_code":"EUR","seamless_credit":1,"currency_sign":"","thousands_separator":","}}],
+
+
+"game_finished":[{"_req_game_name":"AmericanGIgolo","account_status":{"support_buyin":false,"support_cashout":false,"decimal_separator":".","currency_sign":"","rgs_balance":29570,"credit":"29570","currency_code":"EUR","seamless_credit":1,"freeround_limit":0,"thousands_separator":",","currency":"EUR","digits_after_decimal_separator":2},"status":{"status":"ok"},"_req_session_id":"e6937681f75815ffb1a1d9aebbd0c35f","server_curr_timestamp":{"timestamp_http":"2019/09/15 11:57:56","timestamp_epoch":1568548676.50873,"timestamp":"2019-09-15 11:57:56.508727+03"},"_req_command":"game_finished","_req_sequence_number":417}],
+
+
+"continue":[{"status":{"status":"ok"},"account_status":{"support_buyin":false,"support_cashout":false,"digits_after_decimal_separator":2,"currency":"EUR","thousands_separator":",","freeround_limit":0,"seamless_credit":1,"credit":"29570","currency_code":"EUR","currency_sign":"","rgs_balance":0,"decimal_separator":"."},"_req_game_name":"AmericanGIgolo","_req_sequence_number":546,"_req_command":"continue","result":[],"_req_session_id":"e6937681f75815ffb1a1d9aebbd0c35f","server_curr_timestamp":{"timestamp":"2019-09-15 12:20:20.495188+03","timestamp_epoch":1568550020.49519,"timestamp_http":"2019/09/15 12:20:20"}}],
+
+"gamble":[{"_req_command":"continue","result":[{"win":0,"type_descr":"RED/BLACK","step_number":4,"start_subgame_timestamp":"2019-09-15 15:03:18.710356+03","double_cards_history":[44,0,37,8,28,33],"end_subgame_timestamp":null,"double_result":"lost","limit_over":false,"type":"result_red_black_double","request_params":{"double_betpart":"all","double_key":"red"},"double_win":0,"double_bet":"20"}],"_req_sequence_number":43,"_req_session_id":"af247570123cf589dda5c7c7e9f84ddf","server_curr_timestamp":{"timestamp_http":"2019/09/15 15:03:18","timestamp":"2019-09-15 15:03:18.710356+03","timestamp_epoch":1568559798.71036},"_req_game_name":"AmericanGIgolo","account_status":{"support_buyin":false,"support_cashout":false,"credit":"29970","currency_code":"EUR","rgs_balance":0,"currency_sign":"","decimal_separator":".","digits_after_decimal_separator":2,"currency":"EUR","thousands_separator":",","seamless_credit":1,"freeround_limit":0},"gameplay_id":1291090826,"status":{"status":"ok"}}],
+
+"free_result":{"scatters_win":[{"positions":[[2,0],[0,2],[0,4]],"increase_factor_bonus":[],"bonus_type":"free_games","wilds":null,"wild_exists":null,"bonus_value":"12","msgs":null,"factor":"5","symbols_positions":{"1":{"positions":[[2,0],[0,2],[0,4]]}},"symbol":"1","subgame_win_factor":1,"count":"3","win":"150","paytable_factor":5}],"reels_stop_timing":[1,1,1,1,1],"total_bet":30,"subgame_factor":"1","type":"slot_subgame","is_free":false,"real_reels_in_use":false,"is_last":false,"subgame_label_game_total":1,"expanded_wilds":[],"total_win":150,"end_subgame_timestamp":null,"win":"150","stop_reels_pos":[[126,107,64,102,64],[127,108,65,103,65],[64,109,66,104,66]],"subgame_label_game_number":1,"stop_reels":[["2","4","1"],["6","7","10"],["1","3","3"],["7","9","2"],["1","2","4"]],"subgame_label":"main","lines_win":[],"reels_anim_time":1,"bonus":null,"step_number":0,"stop_indexes":[[126,127,64],[107,108,109],[64,65,66],[102,103,104],[64,65,66]],"type_descr":"SPIN","request_params":{"demo":null,"total_win_limit":null,"total_bet":30,"extra_bet":0,"game_denom":"0.01","line_bet":"1","lines":"30"},"result_reels":[["2","6","1","7","1"],["4","7","3","9","2"],["1","10","3","2","4"]],"free_games":12,"msgs":[],"skip_reels_anim":false,"start_subgame_timestamp":"2019-09-15 15:41:44.31342+03","free_game_number":0,"reels_dir":["down","down","down","down","down"],"subgame_bonus":[],"wait_for_button":false,"free_game_total":0,"reels_sets_name":"135","reels_start_timing":[1,1,1,1,1],"increase_factor_bonus":null,"add_wilds":0},
+
+"free_spin_result":{"bonus":null,"reels_anim_time":1,"subgame_label":"free","lines_win":[],"stop_reels":[["9","9","9"],["6","2","3"],["6","8","2"],["3","4","2"],["9","9","9"]],"stop_reels_pos":[[458,497,486,502,452],[459,498,487,503,453],[460,499,488,504,454]],"subgame_label_game_number":1,"win":"0","end_subgame_timestamp":null,"expanded_wilds":[],"total_win":150,"subgame_label_game_total":12,"is_last":false,"real_reels_in_use":false,"is_free":true,"type":"slot_subgame","reels_stop_timing":[1,1,1,1,1],"subgame_factor":"1","total_bet":30,"scatters_win":[],"add_wilds":0,"reels_start_timing":[1,1,1,1,1],"increase_factor_bonus":null,"reels_sets_name":"136","wait_for_button":false,"free_game_total":12,"reels_dir":["down","down","down","down","down"],"subgame_bonus":[],"start_subgame_timestamp":null,"free_game_number":1,"free_games":0,"msgs":[],"skip_reels_anim":false,"request_params":{"line_bet":"1","game_denom":"0.01","lines":"30","demo":null,"total_win_limit":null,"total_bet":30,"extra_bet":0},"result_reels":[["9","6","6","3","9"],["9","2","8","4","9"],["9","3","2","2","9"]],"type_descr":"FREE GAME","stop_indexes":[[458,459,460],[497,498,499],[486,487,488],[502,503,504],[452,453,454]],"step_number":1}
+
+
+
+}

@@ -1,0 +1,24 @@
+Game Name = FlameDancer;
+
+Reel Strip 1 = A-10|J-10|K-10|Q-10|10-10|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip 2 = A-10|J-10|K-10|Q-10|10-10|P_1-5|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip 3 = A-10|J-10|K-10|Q-10|10-10|P_1-5|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip 4 = A-10|J-10|K-10|Q-10|10-10|P_1-5|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip 5 = A-10|J-10|K-10|Q-10|10-10|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip 6 = ;
+
+Reel Strip Bonus 1 = A-10|J-10|K-10|Q-10|10-10|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip Bonus 2 = A-10|J-10|K-10|Q-10|10-10|P_1-5|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip Bonus 3 = A-10|J-10|K-10|Q-10|10-10|P_1-5|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip Bonus 4 = A-10|J-10|K-10|Q-10|10-10|P_1-5|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip Bonus 5 = A-10|J-10|K-10|Q-10|10-10|P_2-10|P_3-10|P_4-10|P_5-10|SCAT-5;
+Reel Strip Bonus 6 = ;
+
+Win Line = 1-10|2-10|3-10|4-10|5-20|6-10|7-10|8-10|9-10|10-10|20-1|30-1|40-1|50-1;
+Win Bonus = 10-5|50-5|100-5|200-20|300-1|400-1|500-1;
+
+Step Symbol = 3;
+Step Fixed = P_1-SCAT-4;
+Symbol Fixed = ;
+
+10, Q, P_5, K, 10, P_2, J, P_3, 10, P_2, Q, P_4, SCAT, P_2, 10, P_5, A, P_2, P_4, J, Q, P_3, P_1, J, SCAT, A, Q, P_5, P_4, P_2, K, A, J, P_4, K, Q, P_1, SCAT, A, K, P_5, P_3, SCAT, P_1, P_5, 10, Q, P_3, SCAT, J, A, P_5, P_4, SCAT, P_1, P_3, Q, P_4, P_5, A, J, Q, K, 10, P_4, P_3, SCAT, P_1, J, P_2, SCAT, P_4, K, P_5, SCAT, 10, Q, J, P_3, P_1, A, P_4, P_5, K, 10, P_2, J, A, P_4, P_3, Q, J, A, P_2, SCAT, K, P_1, A, 10, P_2, P_3, P_1, 10, K, P_3, P_1, P_5, K, P_2, P_1

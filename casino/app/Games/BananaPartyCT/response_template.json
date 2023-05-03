@@ -1,0 +1,84 @@
+{
+
+"create_session":[{"status":{"status":"ok"},"game_loader_application":"MainInetLoaderGames","_req_sequence_number":11,"_req_game_name":null,"last_game_recall_enabled":0,"server_denom":{"id":"0.01","cents":1,"value":0.01,"label":"0.01"},"current_timestamp":"2019-09-17 16:08:46.290843+03","server_curr_timestamp":{"timestamp":"2019-09-17 16:08:46.290843+03","timestamp_http":"2019/09/17 16:08:46","timestamp_epoch":1568736526.29084},"_req_session_id":null,"_req_command":"create_session","start_sequence_number":10,"use_currency_locale":false,"multigame_application":null,"regulation":"None","credit_display_mode":"cash_only","session_id":"bdbf62b9cd99ffa500ea859d0c09011e","preferred_languages":["en"],"client_request_timeout":31,"gameplay_mintime":0,"enabled_denoms":[{"label":"0.01","cents":1,"id":"0.01","value":0.01},{"cents":5,"id":"0.05","value":0.05,"label":"0.05"}],"account_status":{"currency_code":"EUR","rgs_balance":30000,"demo_mode":true,"support_buyin":false,"currency_sign":"","seamless_credit":1,"credit":30000,"currency":"EUR","decimal_separator":".","support_cashout":false,"win_limit_over":false,"thousands_separator":","},"ping_interval":10}],
+
+
+"init_game":[{"resume":false,"_req_command":"init_game","_req_session_id":"bdbf62b9cd99ffa500ea859d0c09011e","server_curr_timestamp":{"timestamp":"2019-09-17 16:08:46.533163+03","timestamp_http":"2019/09/17 16:08:46","timestamp_epoch":1568736526.53316},"account_status":{"seamless_credit":1,"credit":"30000","currency_sign":"","support_buyin":false,"rgs_balance":0,"freeround_limit":0,"currency_code":"EUR","digits_after_decimal_separator":2,"thousands_separator":",","support_cashout":false,"currency":"EUR","decimal_separator":"."},"freeround_lines":null,"freeround_bet_per_line_cents":null,"server_version":{"game_checksum":"SHA-256:bc1f12e282f2dd2879d8e12a25eb3d919f7426cd3bf67e794d86dd612b3ad9b8; SHA-1:1466273f4bf108bf2e0409be0b35bcc12a54b469; ","rgs_protocol_version":"1.1","game_protocol_version":1.2,"rgs_core_checksum":"SHA-256:c13945d17b3e67a0d88a1180aacb111af201fff5aed08de8f09ce75d025f9b2e; SHA-1:63c2daa370ac51314173f56502b34227f2462146; ","icasino_checksum":"SHA-256:5f70b3868f17f15d92befd2b1c8a783f4f06a13784e8271c674338b5dbfc15a3; SHA-1:4510abec79390732c388654effeedb0f95e2b416; "},"_req_sequence_number":12,"game_config":{"game_denoms":{"0.01":"0.01","0.05":"0.05"},"game_type":null,"lines_max_number":25,"reel_anim_real":0,"main_subgame_reels_set":"29","line_max_bet":20,"paytable_scatters_old":{"1":{"3":{"factor":"5","bonus_value":0,"bonus_type":"none"},"5":{"factor":"500","bonus_type":"none","bonus_value":0},"4":{"bonus_value":0,"bonus_type":"none","factor":"20"}}},"lines_mode":"25","paytable_wilds_old":{"8":{"multi":0,"expanding":0,"exclude":{"8":{"count":1},"1":{"count":1}},"factor":"1"}},"win_limit":0,"lines_step_numbers_quick":[1,10,15,20,25],"reels_sets":{"29":{"reels":[[8,8,8,4,4,4,2,2,2,2,5,5,5,2,2,2,5,5,5,1,2,2,2,3,3,3,2,2,2,5,5,5,2,2,2,5,5,5,2,2,2,7,7,7,1,2,2,2,8,8,8,2,2,2,6,6,6,2,2,2,2,2,2,1],[3,3,3,4,4,4,3,3,3,6,6,6,3,3,3,3,3,3,3,8,8,8,6,6,6,3,3,3,8,8,8,1,3,3,3,2,2,2,3,3,3,6,6,6,5,5,5,7,7,7,1,3,3,3,6,6,6,3,3,3,6,6,6,1],[2,2,2,4,4,4,3,3,3,4,4,4,7,7,7,4,4,4,7,7,7,4,4,4,8,8,8,4,4,4,4,4,8,1,4,4,4,6,6,6,4,4,4,7,7,7,1,4,4,4,7,7,7,8,4,4,4,4,5,5,5,7,7,7],[5,5,5,5,5,5,5,5,5,5,5,5,8,8,8,8,8,8,4,4,4,4,4,4,4,4,4,4,1,3,2,2,2,2,3,2,2,2,2,2,2,6,6,6,6,6,6,7,7,7,1,3,3,3,3,3,3,3,3,3,4,3,3,3],[4,4,4,4,4,4,4,4,4,4,4,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,2,5,5,5,5,5,5,5,5,5,5,5,8,8,8,8,8,8,8,3,3,3,3,3,3,4,3,2,2,2,2,2,3,2,2]],"symbols":["1","2","3","4","5","6","7","8"]}},"line_min_bet":1,"columns":5,"paytable_old":{"4":{"5":"100","4":"20","3":"5"},"5":{"5":"200","4":"40","3":"10"},"7":{"4":"50","5":"500","3":"10"},"6":{"3":"10","4":"40","5":"200"},"8":{"4":"750","5":"1000","3":"40"},"2":{"5":"100","4":"20","3":"5"},"3":{"3":"5","4":"20","5":"100"}},"subgames_labels":{"main":{"subgame_id":"29","symbols":["1","2","3","4","5","6","7","8"]}},"license":"","directory_name":"BananaParty","game_win_check_type":"lines","rows":3,"lines_step_numbers":[5,10,15,20,25],"reel_rotate_mintime":0,"line_step_bet_numbers_quick":[1,2,3,5,10],"celebration":0,"result_math_real":"","line_step_bet_numbers":[1,2,3,5,10],"init_screen":[["2","3","4","8","3"],["1","3","4","4","3"],["8","3","4","4","3"]],"lines_min_number":1,"double":{"double_enable":1,"double_enter_limit":10,"double_limit":50,"double_type":"rb"},"line_step_bet_numbers_quick_increment":"steps_only","last_game_recall_enabled":0,"autoplay_steps":[0,5,10,25,50,100,500,1000],"skill_stop_enabled":1,"allow_client_demo_request":0,"main_subgame_label":"main","app_name":"Banana Party","extra_bet_enabled":false,"init_screen_subgame_label":"main","demo":null,"lines_per_credit":1,"lines":[["1","1","1",1,1],["0","0","0",0,0],["2","2","2","2","2"],["0","1","2",1,0],["2","1","0","1",2],["0","0","1",2,2],["2","2","1","0",0],["1","0","1",2,1],["1","2","1",0,1],["0","1","0","1",0],["2","1","2",1,2],["0","1","1",1,1],["2","1","1",1,1],["1","1","0","0",0],["1","1","2",2,2],["1","0","0",0,0],["1","2","2",2,2],["0","0","0",0,1],["2","2","2","2",1],["2","2","1",2,2],["0","0","1",0,0],["0","1","1",1,0],["2","1","1",1,2],["2","0","0","0","2"],["0","2","2",2,0]],"paytables":{"29":{"paytable":{"4":{"4":{"factor":"20","ordering":9},"5":{"factor":"100","ordering":16},"3":{"factor":"5","ordering":3}},"7":{"3":{"factor":"10","ordering":6},"4":{"factor":"50","ordering":13},"5":{"factor":"500","ordering":19}},"5":{"3":{"ordering":4,"factor":"10"},"5":{"ordering":17,"factor":"200"},"4":{"ordering":11,"factor":"40"}},"8":{"4":{"ordering":20,"factor":"750"},"5":{"ordering":21,"factor":"1000"},"3":{"ordering":10,"factor":"40"}},"2":{"4":{"factor":"20","ordering":7},"5":{"ordering":14,"factor":"100"},"3":{"ordering":1,"factor":"5"}},"6":{"4":{"factor":"40","ordering":12},"5":{"ordering":18,"factor":"200"},"3":{"ordering":5,"factor":"10"}},"3":{"3":{"ordering":2,"factor":"5"},"4":{"ordering":8,"factor":"20"},"5":{"ordering":15,"factor":"100"}}},"paytable_wilds":{"8":{"exclude":{"1":{"count":1},"8":{"count":1}},"expanding":0,"multi":0,"factor":"1"}},"paytable_scatters":{"1":{"5":{"factor":"500","free_games_extra_bet_only":0,"ordering":24,"bonus_value":0,"bonus_type":"none"},"4":{"ordering":23,"bonus_value":0,"bonus_type":"none","factor":"20","free_games_extra_bet_only":0},"3":{"free_games_extra_bet_only":0,"factor":"5","ordering":22,"bonus_value":0,"bonus_type":"none"}}}}},"autoplay":1},"_req_game_name":"BananaParty","freeround_limit":0,"status":{"status":"ok"},"show_win":"last_win","finish_game_command":"fast"}],
+
+
+"poll":[
+  {
+    "account_status": {
+      "currency_code": "EUR",
+      "credit": "30000",
+      "currency_sign": "",
+      "rgs_balance": 0,
+      "decimal_separator": ".",
+      "digits_after_decimal_separator": 2,
+      "currency": "EUR",
+      "seamless_credit": 1,
+      "freeround_limit": 0,
+      "thousands_separator": ",",
+      "support_cashout": false,
+      "updated_credit": "30000",
+      "support_buyin": false
+    },
+    "_req_game_name": "BananaParty",
+    "status": {
+      "status": "ok"
+    },
+    "server_curr_timestamp": {
+      "timestamp_http": "2019/09/14 17:30:07",
+      "timestamp_epoch": 1568482207.37722,
+      "timestamp": "2019-09-14 17:30:07.377223+03"
+    },
+    "_req_session_id": "096a64ddf10b43e791ff16a071155ede",
+    "_req_command": "poll",
+    "result": [
+      {
+        "msg": [],
+        "command": "screen_events"
+      },
+      {
+        "account_status": {
+          "decimal_separator": ".",
+          "rgs_balance": 0,
+          "currency_sign": "",
+          "credit": "30000",
+          "currency_code": "EUR",
+          "freeround_limit": 0,
+          "seamless_credit": 1,
+          "thousands_separator": ",",
+          "currency": "EUR",
+          "support_cashout": false,
+          "support_buyin": false
+        },
+        "command": "account_status"
+      }
+    ],
+    "_req_sequence_number": 92
+  }
+],
+
+"play":[{"_req_sequence_number":28,"_req_session_id":"840791d0b3d61569ffcb610cdc4c5569","result":[{"is_last":true,"is_free":false,"real_reels_in_use":false,"reels_start_timing":[1,1,1,1,1],"subgame_factor":"1","free_game_number":0,"reels_anim_time":1,"subgame_label_game_number":1,"wait_for_button":false,"end_subgame_timestamp":null,"stop_reels_pos":[[45,63,5,33,9],[46,0,6,34,10],[47,1,7,35,11]],"scatters_win":[],"subgame_bonus":[],"stop_reels":[["2","2","2"],["1","3","3"],["4","3","3"],["2","3","2"],["4","4","6"]],"type":"slot_subgame","reels_sets_name":"29","total_win":0,"free_games":0,"skip_reels_anim":false,"request_params":{"demo":null,"line_bet":"1","total_bet":25,"extra_bet":0,"total_win_limit":null,"game_denom":"0.01","lines":"25"},"result_reels":[["2","1","4","2","4"],["2","3","3","3","4"],["2","3","3","2","6"]],"start_subgame_timestamp":"2019-09-20 14:19:14.788251+03","total_bet":25,"expanded_wilds":[],"free_game_total":0,"msgs":[],"add_wilds":0,"reels_stop_timing":[1,1,1,1,1],"subgame_label":"main","step_number":0,"increase_factor_bonus":null,"reels_dir":["down","down","down","down","down"],"lines_win":[],"stop_indexes":[[45,46,47],[63,0,1],[5,6,7],[33,34,35],[9,10,11]],"type_descr":"SPIN","bonus":null,"subgame_label_game_total":1,"win":"0"}],"server_curr_timestamp":{"timestamp_http":"2019/09/20 14:19:14","timestamp_epoch":1568989154.78825,"timestamp":"2019-09-20 14:19:14.788251+03"},"account_status":{"freeround_limit":0,"decimal_separator":".","currency":"EUR","credit":"29975","rgs_balance":29975,"digits_after_decimal_separator":2,"support_buyin":false,"currency_sign":"","seamless_credit":1,"thousands_separator":",","currency_code":"EUR","support_cashout":false},"status":{"status":"ok"},"_req_game_name":"BananaParty","jackpot_status":{"jackpot_enabled":false},"_req_command":"play","gameplay_id":"1299454825"}],
+
+
+
+
+"subgame_finished":[{"_req_sequence_number":29,"_req_session_id":"840791d0b3d61569ffcb610cdc4c5569","status":{"status":"ok"},"_req_game_name":"BananaParty","_req_command":"subgame_finished","server_curr_timestamp":{"timestamp_epoch":1568989155.24897,"timestamp_http":"2019/09/20 14:19:15","timestamp":"2019-09-20 14:19:15.248965+03"},"account_status":{"thousands_separator":",","seamless_credit":1,"currency_sign":"","support_cashout":false,"currency_code":"EUR","rgs_balance":0,"credit":"29975","support_buyin":false,"digits_after_decimal_separator":2,"currency":"EUR","freeround_limit":0,"decimal_separator":"."}},{"account_status":{"rgs_balance":0,"credit":"29975","support_buyin":false,"digits_after_decimal_separator":2,"thousands_separator":",","seamless_credit":1,"currency_sign":"","support_cashout":false,"currency_code":"EUR","freeround_limit":0,"decimal_separator":".","currency":"EUR"},"server_curr_timestamp":{"timestamp":"2019-09-20 14:19:15.549929+03","timestamp_http":"2019/09/20 14:19:15","timestamp_epoch":1568989155.54993},"_req_command":"game_finished","_req_game_name":"BananaParty","status":{"status":"ok"},"_req_session_id":"840791d0b3d61569ffcb610cdc4c5569","_req_sequence_number":30}],
+
+
+"game_finished":[{"_req_game_name":"BananaParty","account_status":{"support_buyin":false,"support_cashout":false,"decimal_separator":".","currency_sign":"","rgs_balance":29570,"credit":"29570","currency_code":"EUR","seamless_credit":1,"freeround_limit":0,"thousands_separator":",","currency":"EUR","digits_after_decimal_separator":2},"status":{"status":"ok"},"_req_session_id":"e6937681f75815ffb1a1d9aebbd0c35f","server_curr_timestamp":{"timestamp_http":"2019/09/15 11:57:56","timestamp_epoch":1568548676.50873,"timestamp":"2019-09-15 11:57:56.508727+03"},"_req_command":"game_finished","_req_sequence_number":417}],
+
+
+"continue":[{"status":{"status":"ok"},"account_status":{"support_buyin":false,"support_cashout":false,"digits_after_decimal_separator":2,"currency":"EUR","thousands_separator":",","freeround_limit":0,"seamless_credit":1,"credit":"29570","currency_code":"EUR","currency_sign":"","rgs_balance":0,"decimal_separator":"."},"_req_game_name":"BananaParty","_req_sequence_number":546,"_req_command":"continue","result":[],"_req_session_id":"e6937681f75815ffb1a1d9aebbd0c35f","server_curr_timestamp":{"timestamp":"2019-09-15 12:20:20.495188+03","timestamp_epoch":1568550020.49519,"timestamp_http":"2019/09/15 12:20:20"}}],
+
+"gamble":[{"_req_command":"continue","result":[{"win":0,"type_descr":"RED/BLACK","step_number":4,"start_subgame_timestamp":"2019-09-15 15:03:18.710356+03","double_cards_history":[44,0,37,8,28,33],"end_subgame_timestamp":null,"double_result":"lost","limit_over":false,"type":"result_red_black_double","request_params":{"double_betpart":"all","double_key":"red"},"double_win":0,"double_bet":"20"}],"_req_sequence_number":43,"_req_session_id":"af247570123cf589dda5c7c7e9f84ddf","server_curr_timestamp":{"timestamp_http":"2019/09/15 15:03:18","timestamp":"2019-09-15 15:03:18.710356+03","timestamp_epoch":1568559798.71036},"_req_game_name":"BananaParty","account_status":{"support_buyin":false,"support_cashout":false,"credit":"29970","currency_code":"EUR","rgs_balance":0,"currency_sign":"","decimal_separator":".","digits_after_decimal_separator":2,"currency":"EUR","thousands_separator":",","seamless_credit":1,"freeround_limit":0},"gameplay_id":1291090826,"status":{"status":"ok"}}],
+
+"free_result":{"scatters_win":[{"positions":[[2,0],[0,2],[0,4]],"increase_factor_bonus":[],"bonus_type":"free_games","wilds":null,"wild_exists":null,"bonus_value":"12","msgs":null,"factor":"5","symbols_positions":{"1":{"positions":[[2,0],[0,2],[0,4]]}},"symbol":"1","subgame_win_factor":1,"count":"3","win":"150","paytable_factor":5}],"reels_stop_timing":[1,1,1,1,1],"total_bet":30,"subgame_factor":"1","type":"slot_subgame","is_free":false,"real_reels_in_use":false,"is_last":false,"subgame_label_game_total":1,"expanded_wilds":[],"total_win":150,"end_subgame_timestamp":null,"win":"150","stop_reels_pos":[[126,107,64,102,64],[127,108,65,103,65],[64,109,66,104,66]],"subgame_label_game_number":1,"stop_reels":[["2","4","1"],["6","7","10"],["1","3","3"],["7","9","2"],["1","2","4"]],"subgame_label":"main","lines_win":[],"reels_anim_time":1,"bonus":null,"step_number":0,"stop_indexes":[[126,127,64],[107,108,109],[64,65,66],[102,103,104],[64,65,66]],"type_descr":"SPIN","request_params":{"demo":null,"total_win_limit":null,"total_bet":30,"extra_bet":0,"game_denom":"0.01","line_bet":"1","lines":"30"},"result_reels":[["2","6","1","7","1"],["4","7","3","9","2"],["1","10","3","2","4"]],"free_games":12,"msgs":[],"skip_reels_anim":false,"start_subgame_timestamp":"2019-09-15 15:41:44.31342+03","free_game_number":0,"reels_dir":["down","down","down","down","down"],"subgame_bonus":[],"wait_for_button":false,"free_game_total":0,"reels_sets_name":"135","reels_start_timing":[1,1,1,1,1],"increase_factor_bonus":null,"add_wilds":0},
+
+"free_spin_result":{"bonus":null,"reels_anim_time":1,"subgame_label":"free","lines_win":[],"stop_reels":[["9","9","9"],["6","2","3"],["6","8","2"],["3","4","2"],["9","9","9"]],"stop_reels_pos":[[458,497,486,502,452],[459,498,487,503,453],[460,499,488,504,454]],"subgame_label_game_number":1,"win":"0","end_subgame_timestamp":null,"expanded_wilds":[],"total_win":150,"subgame_label_game_total":12,"is_last":false,"real_reels_in_use":false,"is_free":true,"type":"slot_subgame","reels_stop_timing":[1,1,1,1,1],"subgame_factor":"1","total_bet":30,"scatters_win":[],"add_wilds":0,"reels_start_timing":[1,1,1,1,1],"increase_factor_bonus":null,"reels_sets_name":"136","wait_for_button":false,"free_game_total":12,"reels_dir":["down","down","down","down","down"],"subgame_bonus":[],"start_subgame_timestamp":null,"free_game_number":1,"free_games":0,"msgs":[],"skip_reels_anim":false,"request_params":{"line_bet":"1","game_denom":"0.01","lines":"30","demo":null,"total_win_limit":null,"total_bet":30,"extra_bet":0},"result_reels":[["9","6","6","3","9"],["9","2","8","4","9"],["9","3","2","2","9"]],"type_descr":"FREE GAME","stop_indexes":[[458,459,460],[497,498,499],[486,487,488],[502,503,504],[452,453,454]],"step_number":1}
+
+
+
+}

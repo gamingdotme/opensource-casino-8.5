@@ -1,0 +1,12 @@
+reelStrip1=
+reelStrip2=
+reelStrip3=
+reelStrip4=
+reelStrip5=
+reelStrip6=
+reelStripBonus1=
+reelStripBonus2=
+reelStripBonus3=
+reelStripBonus4=
+reelStripBonus5=
+reelStripBonus6=

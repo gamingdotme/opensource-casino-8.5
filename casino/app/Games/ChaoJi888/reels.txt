@@ -1,0 +1,12 @@
+reelStrip1=1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0
+reelStrip2=1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0
+reelStrip3=1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0
+reelStrip4=
+reelStrip5=
+reelStrip6=
+reelStripBonus1=
+reelStripBonus2=
+reelStripBonus3=
+reelStripBonus4=
+reelStripBonus5=
+reelStripBonus6=

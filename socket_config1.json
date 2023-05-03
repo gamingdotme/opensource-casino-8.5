@@ -1,0 +1,13 @@
+{
+
+"port":22088,
+
+"host":"betshop.us",
+"prefix":"https://",
+
+"host_ws":"betshop.us",
+"prefix_ws":"wss://",
+
+"ssl":true
+
+}
