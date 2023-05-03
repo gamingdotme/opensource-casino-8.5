@@ -17,7 +17,9 @@ Setup your server with Apache, mysql, php 7.1-4, composer, nodejs16 & PM2
 Force Domain SSL 
 Generate SSL CRT KEY & BUNDLE COPY THE CONTENTS OF YOUR CRT/KEY/BUNDLE TO FILES IN FOLDER 
 CASINO/PTWEBSOCKET/SSL/ Create a new email & password 
+
 Create a new database Grant all access Import the SQL file located in folder CASINO/DATABASE/MIGRATIONS/betshopme_8.sql via PHPMYADMIN to the database extra DB file not required (experimentalarcadegames.sql) unless you are experimenting with arcade games Zip File Uploads Casino.zip and public_html.zip should be unzipped in the following manner public_html → this is your public directory casino → this goes outside your public folder for security so it becomes YOUR ROOT FOLDER /casino /public_html If you decide to move your casino folder INSIDE public_html You have to modify two things 1: open index.php inside public_html and replace all folder paths ( ./../casino portion to ./casino/ ) 2: MUST configure .htaccess to deny .env files or all dot files ( google dot files protection via htaccess) //**** extra tip since it contains demo user accounts Generate new password hash for existing users and run this in phpmyadmin (replace hash) https://bcrypt-generator.com/ If you need to has a new word. Example : (run this in phpmyadmin) UPDATE w_users SET `password` = '$2a$12$s1RpwEx/oTL3vYQGZjC33eBHECRJb7gkjmAk9Tmyefub7gQ4nh8XS';
+
 This has makes all users have password : Test123 *********/// 
 SSL SPECIFIC INSTRUCTIONS Delete self signed if any Generate or install the Lets Encrypt one if you have it Save text file via notepad or direct 
 Certificate: (CRT) ==> crt.crt Private Key (KEY) --> key.key Certificate Authority Bundle: (CABUNDLE) ==> intermediate.pem 
